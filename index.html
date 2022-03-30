@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Spartan:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Boxicons CDN Link -->
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- JS -->
+    <script src="script.js" defer></script>
+    <title>Dropdown menu and slider - Demo</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Logo</div>
+        <div class="nav-menu">
+          <button class="nav-menu-toggle-btn" aria-label="open navigation menu">
+            <i class="bx bx-menu"></i>
+          </button>
+          <div class="nav-menu-list">
+            <div class="nav-menu-header">
+              <div class="logo">Logo</div>
+              <button class="nav-close-btn" aria-label="close navigation menu">
+                <i class="bx bx-x"></i>
+              </button>
+            </div>
+            <ul>
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <button>
+                  Javascript
+                  <i class="bx bxs-chevron-down js-arrow arrow"></i>
+                </button>
+                <ul class="sub">
+                  <li>
+                    <a href="#"> Dynamic Clock </a>
+                  </li>
+                  <li>
+                    <a href="#"> Form Validation </a>
+                  </li>
+                  <li>
+                    <a href="#"> Card Slider </a>
+                  </li>
+                  <li>
+                    <button>More <i class="bx bxs-chevron-down js-arrow arrow"></i></button>
+                    <ul class="sub">
+                      <li>
+                        <a href="#"> Web Design </a>
+                      </li>
+                      <li>
+                        <a href="#"> Login Forms </a>
+                      </li>
+                      <li>
+                        <a href="#"> Card Design </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"> About </a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="search-box">
+          <button class="search-box-btn" aria-label="search">
+            <i class="bx bx-search"></i>
+          </button>
+          <div class="search__input-box">
+            <input type="text" name="" id="" placeholder="Search..." />
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Welcome</h1>
+      <section class="slider-container" aria-label="Photos carousel">
+        <div class="slider">
+          <button class="carousel__button prev">&lt;</button>
+          <button class="carousel__button next">&gt;</button>
+          <ul class="slider__images">
+            <li class="slider__image__container active-slide">
+              <img src="https://source.unsplash.com/78A265wPiO4" alt="Nature Image #1" />
+            </li>
+            <li class="slider__image__container">
+              <img src="https://source.unsplash.com/eOpewngf68w" alt="Nature Image #2" />
+            </li>
+            <li class="slider__image__container">
+              <img src="https://source.unsplash.com/ndN00KmbJ1c" alt="Nature Image #3" />
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
