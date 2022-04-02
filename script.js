@@ -12,7 +12,7 @@ subMenus.forEach((submenu) => {
   const subMenuParent = submenu.parentNode.firstElementChild;
   subMenuParent.addEventListener("click", (e) => {
     e.stopPropagation();
-    e.target.blur();
+    // e.target.blur();
     subMenuParent.parentNode.classList.toggle("active-submenu");
   });
 });
@@ -24,6 +24,7 @@ navCloseButton.addEventListener("click", () => {
   closeAllSubmenues();
 });
 
+// close nav menu on click outside
 document.addEventListener("click", (e) => {
   if (!e.target.closest(".nav-menu")) {
     navMenu.classList.remove("active-menu");
@@ -41,14 +42,23 @@ const closeAllSubmenues = () => {
 // search
 const searchButton = document.querySelector(".search-box-btn");
 const searchInputBox = document.querySelector(".search__input-box");
+const searchIcon = document.querySelector(".bx-search");
 
 searchButton.addEventListener("click", () => {
   searchInputBox.classList.toggle("active-search");
+  // switch search icon open/close status
+  if (searchInputBox.classList.contains("active-search")) {
+    searchIcon.className = "bx bx-x";
+  } else {
+    searchIcon.className = "bx bx-search";
+  }
 });
 
+// close search window on click outside and change icon
 document.addEventListener("click", (e) => {
   if (!e.target.closest(".search-box")) {
     searchInputBox.classList.remove("active-search");
+    searchIcon.className = "bx bx-search";
   }
 });
 
